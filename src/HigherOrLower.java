@@ -1,20 +1,12 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
 public class HigherOrLower {
-    private static final List<String> yesNoList = new ArrayList<>();
-    private static final List<String> highLowList = new ArrayList<>();
+    private static final List<String> yesNoList = Arrays.asList("y", "n");
+    private static final List<String> highLowList = Arrays.asList("h", "l");
 
     private static int score = 0;
 
     public static void main(String[] args) {
-        yesNoList.add("y");
-        yesNoList.add("n");
-        highLowList.add("h");
-        highLowList.add("l");
-
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to Higher or Lower! Enter Yes (Y) or No (N) to play...");
         String answer = validateInput(yesNoList, scanner);
